@@ -12,7 +12,7 @@ class GroqRecommendationEngine:
     def __init__(self, api_key: str):
         """Initialize Groq client"""
         self.client = Groq(api_key=api_key)
-        self.model = "mixtral-8x7b-32768"
+        self.model = "llama-3.3-70b-versatile"  # Latest available Groq model
         self.conversation_history = []
     
     def _create_system_prompt(self) -> str:

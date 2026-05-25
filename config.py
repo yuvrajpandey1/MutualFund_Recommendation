@@ -20,7 +20,7 @@ STREAMLIT_SERVER_PORT = int(os.getenv("STREAMLIT_SERVER_PORT", 8501))
 STREAMLIT_SERVER_ADDRESS = os.getenv("STREAMLIT_SERVER_ADDRESS", "localhost")
 
 # LLM Configuration
-LLM_MODEL = os.getenv("LLM_MODEL", "mixtral-8x7b-32768")
+LLM_MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
 LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", 0.7))
 LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", 1024))
 
