@@ -48,7 +48,7 @@ Provide recommendations in a structured format with fund names, reasons for reco
             system_prompt += f"\n\nAvailable Mutual Funds Database:\n{funds_context}"
         
         try:
-            response = self.client.chat.completion_create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
                     {
