@@ -6,6 +6,10 @@ import pandas as pd
 import sys
 import os
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
 
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -15,7 +19,7 @@ from models.llm_engine import RecommendationService
 
 # Configuration
 # Get your Groq API key from: https://console.groq.com/keys
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "your-groq-api-key-here")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "your-groq-api-key-here")
 
 # Initialize session state
 if 'recommendation_service' not in st.session_state:
